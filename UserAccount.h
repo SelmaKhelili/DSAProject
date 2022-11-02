@@ -24,8 +24,19 @@ class UserAccount
     friend class MailServer ;
     bool checkIfMailArivedAtDestination  ( UserAccount User1, UserAccount User2) const{ return User2.MailBox.contains(User1.m_Email)};
 public:
-    UserAccount();
-    ~UserAccount();
+    UserAccount(string UserName, string UserID ): m_UserName(nullptr), m_UserID(nullptr)
+        {
+        m_Username=enterUserName( UserName);
+        m_UserID  = enterUserID( UserID );
+         }
+    m_UserName=0;
+    m_UserID=0;
+        
+    ~UserAccount()
+    {
+        delete [] m_UserName;
+        delete [] m_UserID;
+    }
     void getUserName() const
     {
         return m_UserName;
@@ -45,7 +56,19 @@ private:
     EmailObj m_Email;
     queue <EmailObj> MailBox;
     queue <EmailObj> SentMails;
+    
+    // Some Utility Functions //
+    void enterUserName ( string UserName )
+    { 
+        for(int i=0; i<UserName.length(); i++)
+        cin>>m_UserName [i];
+     }
 
+      void enterUserName ( string UserID )
+    { 
+         for(int i=0; i<UserName.length(); i++)
+        cin>>m_UserID [i];
+     }
     //timeZone //
 
 };
