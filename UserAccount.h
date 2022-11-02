@@ -57,17 +57,19 @@ private:
     queue <EmailObj> MailBox;
     queue <EmailObj> SentMails;
     
-    // Some Utility Functions //
+    // Some Utility Functions to enter data //
     void enterUserName ( string UserName )
     { 
         for(int i=0; i<UserName.length(); i++)
         cin>>m_UserName [i];
+        
      }
 
       void enterUserName ( string UserID )
     { 
          for(int i=0; i<UserName.length(); i++)
-        cin>>m_UserID [i];
+         cin>>m_UserID [i];
+          
      }
     //timeZone //
 
