@@ -29,14 +29,16 @@ public:
         m_Username=enterUserName( UserName);
         m_UserID  = enterUserID( UserID );
          }
-    m_UserName=0;
-    m_UserID=0;
+
         
     ~UserAccount()
     {
         delete [] m_UserName;
         delete [] m_UserID;
     }
+    
+    m_UserName=0;
+    m_UserID=0;
     void getUserName() const
     {
         return m_UserName;
