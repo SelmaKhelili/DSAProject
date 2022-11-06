@@ -1,7 +1,7 @@
 
 #include <queue>
 
-class <EmailObj> MailServer;
+class <EmailObj> MailServer;  //forward declaration 
 
 using std::string;
 
@@ -73,6 +73,6 @@ private:
          cin>>m_UserID [i];
           
      }
-    //timeZone //
+   // string TimeZone;   // this additional data will be used for better experience.
 
 };
