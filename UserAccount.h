@@ -73,6 +73,6 @@ private:
          cin>>m_UserID [i];
           
      }
-   // string TimeZone;   // this additional data will be used for better experience.
+   // string TimeZone;   // this additional data to improve sending email phase.
 
 };
